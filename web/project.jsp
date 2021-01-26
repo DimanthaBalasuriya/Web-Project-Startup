@@ -141,7 +141,7 @@
                 <div class="preview-box">
                 </div>
                 <div class="fund-button">
-                    <a href="#">Fund</a>
+                    <a href="FundProject.jsp?id=<%=id%>">Fund</a>
                 </div>
             </div>
             <div class="footer-section">

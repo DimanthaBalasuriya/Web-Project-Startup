@@ -576,6 +576,50 @@ td{
     margin-left: 50px;
 }
 
+.fund-content{
+    display: flex;
+    padding: 30px;
+}
+
+
+.funding-area{
+    padding: 10px;
+    flex: 1;
+}
+
+.funding-input-area{
+    background-color: #edeeeda1;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.funding-input-area .text-input{
+    height: 10vh;
+    width: 100vh;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.start-it-button{
+    padding: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #069C54;
+    border: 0px;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+
+.funding-project-area{
+    flex: 1;
+}
+
+.funding-project-area .project-box .box {
+    height: 70vh;
+    margin: auto;
+}
+
 @media screen and (min-width: 576px) {}
 
 @media screen and (min-width: 768px) {}

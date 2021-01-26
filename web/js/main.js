@@ -5,3 +5,9 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
+function limitKeypress(event, value, maxLength) {
+    if (value != undefined && value.toString().length >= maxLength) {
+        event.preventDefault();
+    }
+}
