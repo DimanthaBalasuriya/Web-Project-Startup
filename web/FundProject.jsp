@@ -61,13 +61,14 @@
                         </div>
                     </div>
                     <div class="funding-project-area">
-                        <div class="project-box">
+                        <div class="box-row">
                             <%
                                 String title = "";
                                 String description = "";
                                 String state = "";
                                 String link = "";
                                 String id = "";
+                                String price = "";
 
                                 try {
                                     ResultSet rs = Database.getData("SELECT prg_id, prg_name, prg_description, prg_exp_fund, prg_curr_fund, use_id, prg_vid_link FROM Project WHERE prg_id = '1' AND prg_state = '1'");
@@ -79,6 +80,7 @@
                                         description = rs.getString("prg_description");
                                         link = rs.getString("prg_vid_link");
                                         id = rs.getString("prg_id");
+                                        price = rs.getString("prg_exp_fund");
 
                                         if (amountOne > amountTwo) {
                                             //Not complete project.
@@ -87,15 +89,14 @@
                                             state = "Complete";
                                         }
                             %>
-                            <div class="box">
-                                <div class="upper-box-area">
-                                    <a href="project.jsp?id=<%=pid%>" class="link">
-                                        <p class="box-title"><% out.print(title); %></p>
-                                    </a>
-                                </div>
-                                <div class="box-lower-area">
-                                    <p class="box-description"><% out.print(description); %></p>
-                                    <p class="box-state"><% out.print(state); %></p>
+                            <div class="box-column">
+                                <div class="box-card">
+                                    <img src="img/img1.jpg" alt="Start Up" style="width: 100%">
+                                    <h1><% out.print(title); %></h1>
+                                    <p class="box-price"><% out.print(price); %></p>
+                                    <p class="box-price"><% out.print(state); %></p>
+                                    <p><% out.print(description);%></p>
+                                    <p><button><a href="project.jsp?id=<%=id%>">Fund</a></button></p>
                                 </div>
                             </div>
                             <%

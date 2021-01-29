@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -37,8 +38,18 @@
 }
 
 .hero-section {
-    height: 100vh;
-    background: #FBFEFD;
+    height: auto; /* It doesn't have to be '%'. It can also use 'px'. */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-image: url(../img/img1.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.hero-section img{
+    width: 100%;
 }
 
 .nav {
@@ -96,7 +107,7 @@
 
 .hero-section-left p {
     font-size: 20px;
-    color: #707070;
+    color: #FBFEFD;
     margin-top: 10px;
     margin-bottom: 30px;
 }
@@ -122,11 +133,12 @@
 
 .hero-intro-title{
     font-size: 80px;
-    color: #393939;
+    color: #048654;
 }
 
 .hero-intro-story{
     font-size: 20px;
+    color: #FBFEFD;
 }
 
 .hero-column-one, .hero-column-two, .hero-column-three{
@@ -176,17 +188,17 @@
 }
 
 .one-section {
-    height: 100vh;
+    height: auto;
     background-color: #FFFFFF;
 }
 
 .two-section {
-    height: 100vh;
+    height: auto;
     background-color: #FFFFFF;
 }
 
 .three-section {
-    height: 100vh;
+    height: auto;
     background-color: #FFFFFF;
 }
 
@@ -357,7 +369,7 @@
 }
 
 .campaing-form-text-area{
-    color: #393939;
+    color: #FFFFFF;
     font-size: 30px;
     text-transform: uppercase;
 }
@@ -584,7 +596,6 @@ td{
 
 .funding-area{
     padding: 10px;
-    flex: 1;
 }
 
 .funding-input-area{
@@ -612,16 +623,83 @@ td{
 }
 
 .funding-project-area{
-    flex: 1;
-}
-
-.funding-project-area .project-box .box {
-    height: 70vh;
+    width: 100%;
     margin: auto;
 }
 
-@media screen and (min-width: 576px) {}
+/*@media screen and (min-width: 576px) {}
 
 @media screen and (min-width: 768px) {}
 
 @media screen and (min-width: 960px) {}
+*/
+
+/* Card Area */
+
+.box-row{
+    margin: 0 -5px;
+}
+
+.box-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.box-column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+.box-card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    margin-top: 30px;
+    font-family: arial;
+}
+
+.box-card h1{
+    padding: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.box-price{
+    color: gray;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.box-card p{
+    padding: 10px;
+}
+
+.box-card button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    background-color: #069C54;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.box-card button a{
+    text-decoration: none;
+    color: white;
+}
+
+.box-card button:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 600px) {
+    .box-column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}

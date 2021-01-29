@@ -53,25 +53,36 @@
             <div class="one-section">
                 <div class="explore-complete-project-area">                    
                     <p class="heading-one">Successpull project titles</p>
-                    <div class="project-box">
-                        <%
+                    <div class="box-row">
 
+                        <%
+                            String id = "";
                             String title = "";
                             String description = "";
                             String state = "";
                             String link = "";
-                            String id = "";
+                            String price = "";
+
+                            int count = 0;
 
                             try {
                                 ResultSet rs = Database.getData("SELECT prg_id, prg_name, prg_description, prg_exp_fund, prg_curr_fund, use_id, prg_vid_link FROM Project WHERE prg_state = '1'");
                                 while (rs.next()) {
+
+                                    if (count == 8) {
+                                        break;
+                                    } else {
+                                        count++;
+                                    }
+
                                     double amountOne = rs.getDouble("prg_exp_fund");
                                     double amountTwo = rs.getDouble("prg_curr_fund");
 
+                                    id = rs.getString("prg_id");
                                     title = rs.getString("prg_name");
                                     description = rs.getString("prg_description");
                                     link = rs.getString("prg_vid_link");
-                                    id = rs.getString("prg_id");
+                                    price = rs.getString("prg_exp_fund");
 
                                     if (amountOne > amountTwo) {
                                         //Not complete project.
@@ -82,46 +93,60 @@
                                     }
 
                         %>
-                        <div class="box">
 
-                            <div class="upper-box-area">
-                                <a href="project.jsp?id=<%=id%>" class="link">
-                                    <p class="box-title"><% out.print(title); %></p>
-                                </a>
-                            </div>
-                            <div class="box-lower-area">
-                                <p class="box-description"><% out.print(description); %></p>
-                                <p class="box-state"><% out.print(state); %></p>
+                        <div class="box-column">
+                            <div class="box-card">
+                                <img src="img/img1.jpg" alt="Start Up" style="width: 100%">
+                                <h1><% out.print(title); %></h1>
+                                <p class="box-price"><% out.print(price); %></p>
+                                <p class="box-price"><% out.print(state); %></p>
+                                <p><% out.print(description);%></p>
+                                <p><button><a href="project.jsp?id=<%=id%>">Fund</a></button></p>
                             </div>
                         </div>
-                        <%
-                                }
+
+                        <%                                                        }
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
                         %>
+
                     </div>
                 </div>
             </div>
             <div class="two-section">
                 <div class="explore-pending-project-area">
                     <p class="heading-one">Start up project titles</p>
-                    <div class="project-box">
+                    <div class="box-row">
+
                         <%
+                            String pId = "";
                             String ptitle = "";
                             String pdescription = "";
                             String pstate = "";
                             String plink = "";
+                            String pPrice = "";
+
+                            int pCount = 0;
 
                             try {
-                                ResultSet rs = Database.getData("SELECT prg_name, prg_description, prg_exp_fund, prg_curr_fund, use_id, prg_vid_link FROM Project WHERE prg_state = '1'");
+                                ResultSet rs = Database.getData("SELECT prg_id, prg_name, prg_description, prg_exp_fund, prg_curr_fund, use_id, prg_vid_link FROM Project WHERE prg_state = '1'");
                                 while (rs.next()) {
+
+                                    if (pCount == 8) {
+                                        break;
+                                    } else {
+                                        pCount++;
+                                    }
+
                                     double amountOne = rs.getDouble("prg_exp_fund");
                                     double amountTwo = rs.getDouble("prg_curr_fund");
 
+                                    pId = rs.getString("prg_id");
                                     ptitle = rs.getString("prg_name");
                                     pdescription = rs.getString("prg_description");
                                     plink = rs.getString("prg_vid_link");
+                                    pPrice = rs.getString("prg_exp_fund") + " " + "$";
 
                                     if (amountOne > amountTwo) {
                                         //Not complete project.
@@ -132,24 +157,24 @@
                                     }
 
                         %>
-                        <div class="box">
 
-                            <div class="upper-box-area">
-                                <a href="project.jsp?id=<%=id%>" class="link">
-                                    <p class="box-title"><% out.print(title); %></p>
-                                </a>
-                            </div>
-                            <div class="box-lower-area">
-                                <p class="box-description"><% out.print(description); %></p>
-                                <p class="box-state"><% out.print(state); %></p>
+                        <div class="box-column">
+                            <div class="box-card">
+                                <img src="img/img1.jpg" alt="Start Up" style="width: 100%">
+                                <h1><% out.print(title); %></h1>
+                                <p class="box-price"><% out.print(pPrice); %></p>
+                                <p class="box-price"><% out.print(state); %></p>
+                                <p><% out.print(description);%></p>
+                                <p><button><a href="project.jsp?id=<%=pId%>">Fund</a></button></p>
                             </div>
                         </div>
-                        <%
-                                }
+
+                        <%                                                        }
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
                         %>
+
                     </div>
                 </div>
             </div>
