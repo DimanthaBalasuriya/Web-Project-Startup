@@ -79,31 +79,31 @@
                             <div class="hero-text">
                                 Holder
                             </div>
-                            <input type="text" name="" value="<%= userName%>">
+                            <input type="text" class="input" value="<%= userName%>" disabled="true">
                         </div>
                         <div class="hero-column-input">
                             <div class="hero-text">
                                 Project
                             </div>
-                            <input type="text" name="" class="" value="<%= project%>">
+                            <input type="text" class="input" value="<%= project%>" disabled="true" >
                         </div>
                         <div class="hero-column-input">
                             <div class="hero-text">
                                 Category
                             </div>
-                            <input type="text" name="" class="" value="<%= category%>">
+                            <input type="text" class="input" value="<%= category%>" disabled="true">
                         </div>
                         <div class="hero-column-input">
                             <div class="hero-text">
                                 Raised Fund
                             </div>
-                            <input type="text" name="" class="" value="<%= raisedFund%>">
+                            <input type="text" class="input" value="<%= raisedFund%>" disabled="true">
                         </div>
                         <div class="hero-column-input">
                             <div class="hero-text">
                                 Fund capacity
                             </div>
-                            <input type="text" name="" class="" value="<%= fundCapacity%>">
+                            <input type="text" class="input" value="<%= fundCapacity%>" disabled="true">
                         </div>
                     </div>
                     <div class="hero-column-two">
@@ -111,13 +111,13 @@
                             <div class="hero-text">
                                 Description
                             </div>
-                            <input type="textview" name="" class="hero-proj-Ambition" value="<%= description%>">
+                            <textarea disabled="true" ><%= description%></textarea>
                         </div>
                         <div class="hero-column-input">
                             <div class="hero-text">
                                 Explanation
                             </div>
-                            <input type="textview" name="" class="hero-proj-Explanation" value="<%= explanation%>">
+                            <textarea disabled="true"><%= explanation%></textarea>
                         </div>
                     </div>
                     <div class="hero-column-three">
@@ -125,20 +125,70 @@
                             <div class="hero-text">
                                 Ambition    
                             </div>
-                            <input type="textview" name="" class="hero-proj-description" value="<%= ambition%>">
+                            <textarea disabled="true"><%= ambition%></textarea>
                         </div>
                         <div class="hero-column-input">
                             <div class="hero-text">
                                 Future
                             </div>
-                            <input type="textview" name="" class="hero-proj-Future" contenteditable="false" value="<%= future%>">
+                            <textarea disabled="true"><%= future%></textarea>
                         </div>  
                     </div>
                 </div>
             </div>
             <div class="one-section">
+                <div class="heading-one">
+                    Befits For Investors
+                </div>
+                <div class="benifit-area">
+                    <div class="box-row">
+                        <div class="box-column">
+                            <div class="box-card">
+                                <h1>10$ Investment</h1>
+                                <p class="box-price">Free Mug</p>
+                                <p>Rocha admits to a preference of using specialist books over the internet when in these early research stages</p>
+                                <p><button><a href="FundProject.jsp?id=<%=id%>">Choose</a></button></p>
+                            </div>
+                        </div>
+                        <div class="box-column">
+                            <div class="box-card">
+                                <h1>50$ Investment</h1>
+                                <p class="box-price">Free Mug, Sticker</p>
+                                <p>Rocha admits to a preference of using specialist books over the internet when in these early research stages</p>
+                                <p><button><a href="FundProject.jsp?id=<%=id%>">Choose</a></button></p>
+                            </div>
+                        </div>
+                        <div class="box-column">
+                            <div class="box-card">
+                                <h1>100$ Investment</h1>
+                                <p class="box-price">Free Brand T'Shirt</p>
+                                <p>Rocha admits to a preference of using specialist books over the internet when in these early research stages</p>
+                                <p><button><a href="FundProject.jsp?id=<%=id%>">Choose</a></button></p>
+                            </div>
+                        </div>
+                        <div class="box-column">
+                            <div class="box-card">
+                                <h1>500$ Investment</h1>
+                                <p class="box-price">Free Copy, Brand T'Shirt, Mug</p>
+                                <p>Rocha admits to a preference of using specialist books over the internet when in these early research stages</p>
+                                <p><button><a href="FundProject.jsp?id=<%=id%>">Choose</a></button></p>
+                            </div>
+                        </div>
+                        <div class="box-column">
+                            <div class="box-card">
+                                <h1>1000$ Investment</h1>
+                                <p class="box-price">Free Copy, Brand T'Shirt, Mug, Thank you gift!</p>
+                                <p>Rocha admits to a preference of using specialist books over the internet when in these early research stages</p>
+                                <p><button><a href="FundProject.jsp?id=<%=id%>">Choose</a></button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="two-section">
                 <p class="heading-one">Breif of Project</p>
                 <div class="preview-box">
+                    Video Here
                 </div>
                 <div class="fund-button">
                     <a href="FundProject.jsp?id=<%=id%>">Fund</a>

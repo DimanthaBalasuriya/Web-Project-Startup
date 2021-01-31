@@ -180,7 +180,6 @@
             </div>
             <div class="footer-section">
                 <!--Put Column in here-->
-                <h1>Footer</h1>
             </div>
         </div>
     </body>

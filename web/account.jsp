@@ -46,6 +46,7 @@
                 <div class="account-content">
                     <div class="account-area">
                         <p class="heading-one">Account details</p>
+                        <a href="#" style="margin-left: 800px;">Edit</a>
                         <a href="${pageContext.request.contextPath}/Logout">Log out</a>
                     </div>
                     <%
@@ -114,6 +115,88 @@
                     </div>
                 </div>
             </div>
+
+            <div class="intrest-section">
+                <div class="intrest-heading">
+                    <div class="heading-one">
+                        Your Intrest
+                    </div>
+                    <a href="#">Edit</a>
+                </div>
+                <div class="intrest-area">
+                    <div class="intrest-list">
+                        <div class="row">
+                            <div class="column">
+                                <div class="card">
+                                    <h3>DIY</h3>
+                                    <p>Popular</p>
+                                    <p>90%</p>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <div class="card">
+                                    <h3>Video Game</h3>
+                                    <p>Popular</p>
+                                    <p>91%</p>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <div class="card">
+                                    <h3>Music</h3>
+                                    <p>Trending</p>
+                                    <p>70%</p>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <div class="card">
+                                    <h3>Art</h3>
+                                    <p>Trending</p>
+                                    <p>60%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intrest-count-area">
+                        <div class="row">
+                            <div class="column">
+                                <div class="card">
+                                    <h3>DIY</h3>
+                                    <p>Popular</p>
+                                    <p>90%</p>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <div class="card">
+                                    <h3>Video Game</h3>
+                                    <p>Popular</p>
+                                    <p>91%</p>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <div class="card">
+                                    <h3>Music</h3>
+                                    <p>Trending</p>
+                                    <p>70%</p>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <div class="card">
+                                    <h3>Art</h3>
+                                    <p>Trending</p>
+                                    <p>60%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="one-section">
                 <div class="activity-content">
                     <p class="heading-one">Your Activities</p>
@@ -124,7 +207,7 @@
                             <!-- prg_name, prg_category, prg_exp_fund, prg_curr_fund -->
                             <div class="table-area">
                                 <table border="1">
-                                    <thead><th>Name</th><th>Category</th><th>Fund</th><td>Total</td></thead>
+                                    <thead><th>Name</th><th>Category</th><th>Fund</th><th>Total</th></thead>
                                         <%
                                             String pname = "";
                                             String category = "";
@@ -149,7 +232,7 @@
                             <!-- prg_name, prg_category, prg_description, prg_exp_fund -->
                             <div class="table-area">
                                 <table border="1">
-                                    <thead><th>Name</th><th>Category</th><th>Description</th><td>Fund</td></thead>
+                                    <thead><th>Name</th><th>Category</th><th>Description</th><th>Fund</th></thead>
                                         <%
                                             String ppname = "";
                                             String pcategory = "";

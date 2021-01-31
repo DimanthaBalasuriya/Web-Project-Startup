@@ -51,7 +51,9 @@
                         <div class="funding-input-area">
                             <%
                                 String pid = request.getParameter("id");
+                                String amount = request.getParameter("amount");
                                 request.setAttribute("progID", pid);
+                                System.out.println(pid);
                             %>
                             <form method="GET" action="FundProject">
                                 <input type="hidden" value="<%=pid%>" name="progID">
